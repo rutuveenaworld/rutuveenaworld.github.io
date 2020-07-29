@@ -1,0 +1,601 @@
+body {
+    font-family: 'helvetica', 'sans-serif';
+    margin: 0;
+}
+
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, label, strong {
+    line-height: 2;
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+.flex {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.badge {
+    padding: 9px 20px;
+    color: #eee;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.badge.new {
+    background-color: #FF205F;
+}
+
+.badge.strategy {
+    background-color: #4EAE60;
+}
+
+.badge.racing {
+    background-color: #694EAE;
+}
+
+.badge.rpg,
+.badge.adventure {
+    background-color: #40ABF5;
+}
+
+.badge.tournaments {
+    background-color: #FB6E10;
+}
+
+.badge.premium-tournament {
+    background-color: #FFB320;
+    color: #252525;
+}
+
+.shade {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+/* end: global style rules */
+
+/* start: header styles */
+header {
+    background-color: #131313;
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 1px solid #FFB320;
+}
+
+.hamburger-menu {
+    background-color: transparent;
+    border: 1px solid #FFB320;
+    padding: 3px 5px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu .strip {
+    display: block;
+    height: 1px;
+    background-color: #FFB320;
+    margin: 4px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: #eee;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #FFB320;
+}
+
+#login-register-button {
+    background-color: #FFB320;
+    color: #131313;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.user-panel {
+  float: right;
+  font-weight: 500;
+  background: #ffb320;
+  padding: 8px 28px;
+  border-radius: 30px;
+}
+
+.user-panel a {
+  font-size: 14px;
+  color: #131313;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media (max-width: 767px) {
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .flex {
+        max-width: 540px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 101%;
+        width: 100%;
+        background-color: #131313;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 15px 0 15px 20px;
+        border-bottom: 1px solid #FFB320;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-top: 2px;
+    }
+
+} 
+
+footer {
+    background-color: #252525;
+    padding: 25px 0 20px;
+}
+
+footer small {
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+footer small .footer-heart {
+    font-size: 16px;
+}
+
+footer small a {
+    color: #007BDC;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+footer ul li a {
+    color: #ddd;
+    font-size: 0.8em;
+}
+@media (max-width: 1200px) {
+    .flex {
+        max-width: 1000px;
+    }
+     footer .flex {
+        flex-wrap: wrap-reverse;
+    }
+
+    footer small {
+        flex-basis: 100%;
+        font-size: 0.75em;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+
+    footer ul {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0;
+    }
+} 
+
+@media (max-width: 767px) {
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .flex {
+        max-width: 540px;
+    }
+
+ footer ul li {
+        margin: 0 10px;
+    }
+
+    footer ul li a {
+        font-size: 0.75em;
+    }
+} 
+
+
+
+
+.btn-group button {
+  background-color: #000000; /* Green background */
+  border: 1px solid black; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #555555;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1f1;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.column {
+  float:right;
+  width: 25%;
+  padding: 0px 10px;
+}
+
+
+#posts-comments {
+    background: url('https://onclickwebdesign.com/wp-content/uploads/footer_bg_pattern.png') 0 0 repeat;
+    padding: 75px 0;
+}
+
+#posts-comments .game-warrior {
+    flex-basis: 32%;
+    position: relative;
+}
+
+#posts-comments .game-warrior p {
+    color: #eee;
+    font-weight: 600;
+}
+
+#posts-comments .game-warrior img {
+    margin-bottom: 0.5em;
+}
+
+#posts-comments .game-warrior img.footer-graphic {
+    position: absolute;
+    margin-bottom: 0;
+    width: 115%;
+}
+
+#posts-comments .posts-comments-box {
+    flex-basis: 28%;
+    background-color: #252525;
+    padding: 20px 20px 25px;
+    border: 1px solid #4a4a4a;
+}
+
+#posts-comments .posts-comments-box h3 {
+    color: #eee;
+}
+
+.post-item {
+    margin-top: 25px;
+}
+
+.post-item:first-child {
+    margin-top: 0;
+}
+
+.post-item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.post-item img {
+    float: left;
+    width: 30%;
+}
+
+.post-item > div {
+    float: left;
+    margin-left: 5%;
+    width: 65%;
+}
+
+.post-item > div h5 {
+    color: #FFB320;
+    font-size: 0.8em;
+    margin-top: 0;
+}
+
+.post-item > div p {
+    color: #eee;
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+
+.post-item > div small {
+    color: #999;
+    font-size: 0.75em;
+}
+
+.comments-item {
+    margin-top: 1em;
+}
+
+.comments-item:first-child {
+    margin-top: 0;
+}
+
+.comments-item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.comments-item img {
+    width: 23%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+}
+
+.comments-item > div {
+    float: left;
+    margin-left: 7%;
+    width: 70%;
+}
+
+.comments-item > div p {
+    color: #eee;
+    font-size: 0.8em;
+    margin: 0 0 5px;
+}
+
+.comments-item > div p span {
+    color: #999;
+}
+
+.comments-item > div p span.author {
+    color: #E92159;
+}
+
+.comments-item > div h5 {
+    color: #FFB320;
+    font-size: 0.8em;
+    margin-top: 0;
+}
+
+.top-comment {
+  overflow: hidden;
+}
+
+.top-comment .tc-item {
+  margin-bottom: 23px;
+  overflow: hidden;
+}
+
+.top-comment .tc-item .tc-thumb {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  float: left;
+}
+
+.top-comment .tc-item .tc-content {
+  padding-left: 100px;
+}
+
+.top-comment .tc-item .tc-content p {
+  font-size: 12px;
+  color: #d3d3d3;
+  margin-bottom: 5px;
+}
+
+.top-comment .tc-item .tc-content p a {
+  color: #ff205f;
+}
+
+.top-comment .tc-item .tc-content p span {
+  color: #7a7a7a;
+}
+
+.top-comment .tc-item .tc-content .tc-date {
+  font-size: 12px;
+  color: #ffb320;
+}
